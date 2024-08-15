@@ -1,17 +1,14 @@
-package dsa.Arrays;
+package dsa.Arrays.Easy;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class reverseArr {
-    static void reverse(int[] arr) {
+public class swapArr {
+    static void swap(int[] arr, int i1, int i2) {
         int temp = 0;
-        int end = arr.length - 1;
-        for (int i = 0; i <= end / 2; i++) { // divide by two bcoz of the iteration to swap
-            temp = arr[end - i];
-            arr[end - i] = arr[i];
-            arr[i] = temp;
-        }
+        temp = arr[i2];
+        arr[i2] = arr[i1];
+        arr[i1] = temp;
         System.out.println(Arrays.toString(arr));
     }
 
@@ -22,7 +19,11 @@ public class reverseArr {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
-        reverse(arr);
+        System.out.println("Enter index1");
+        int i1 = sc.nextInt();
+        System.out.println("Enter index2");
+        int i2 = sc.nextInt();
+        swap(arr, i1, i2);
         sc.close();
     }
 }

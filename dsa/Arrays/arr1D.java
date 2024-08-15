@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * intToString
  */
-public class inputAndOut1D {
+public class arr1D {
     public static void main(String[] args) {
         int[] arr = new int[5];
         Scanner sc = new Scanner(System.in);
@@ -23,6 +23,6 @@ public class inputAndOut1D {
         // Method 2 to print array
 
         // System.out.println(Arrays.toString(arr));
-
+        sc.close();
     }
 }
